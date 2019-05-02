@@ -1,19 +1,17 @@
+
 <?php
+  session_start();
 
-/*
-	session_start();
-	if (!isset($_SESSION['username'])) {
-		$_SESSION['msg'] = "You must log in first";
-		header('location: login.php');
-	}
+  if (!isset($_SESSION['email'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['email']);
+  	header("location: login.php");
+  }
 
-	if (isset($_GET['logout'])) {
-		session_destroy();
-		unset($_SESSION['username']);
-		header("location: login.php");
-	}
-
-*/
 include 'errors.php';
 require '../aws-autoloader.php';
 use Aws\S3\S3Client;
@@ -124,6 +122,8 @@ $videSlice = array_slice($videOut, 1);
 <html>
 
 <h1>Your recordings</h1>
+<p>Welcome <strong><?php echo $_SESSION['email']; ?></strong></p>
+
 
 <body>
 	<?php foreach($videSlice as $key => $value) : ?>
