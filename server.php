@@ -1,13 +1,14 @@
 <?php
-session_start();
 
+include '/var/www/dbConfig.php';
+session_start();
 // initializing variables
 $firstname = "";
 $lastname    = "";
 $errors = array();
 
 // connect to the database
-$db = mysqli_connect('', '', '', '');
+$db = mysqli_connect($servername, $username, $DBpassword, $database);
 
 // REGISTER USER
 if (isset($_POST['reg_user'])) {
@@ -29,7 +30,7 @@ if (isset($_POST['reg_user'])) {
 
   // first check the database to make sure
   // a user does not already exist with the same username and/or email
-  $user_check_query = "SELECT * FROM users WHERE username='$firstname' OR email='$lastname' LIMIT 1";
+  $user_check_query = "SELECT * FROM users WHERE username='$email' OR email='$email' LIMIT 1";
   $result = mysqli_query($db, $user_check_query);
   $user = mysqli_fetch_assoc($result);
 
@@ -71,7 +72,7 @@ if (isset($_POST['login_user'])) {
   	if (mysqli_num_rows($results) == 1) {
   	  $_SESSION['email'] = $email;
   	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: login.php');
+  	  header('location: dashboard.php');
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}
