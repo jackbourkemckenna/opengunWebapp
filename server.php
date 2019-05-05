@@ -35,12 +35,6 @@ if (isset($_POST['reg_user'])) {
 
   //$user = mysqli_fetch_assoc($result);
 
-  if ($user) { // if user exists
-    if ($user['email'] === $email) {
-      array_push($errors, "Username already exists");
-    }
-	}
-
 
 
   // Finally, register user if there are no errors in the form
@@ -53,6 +47,7 @@ if (isset($_POST['reg_user'])) {
   //	$_SESSION['username'] = $firstname;
   //	$_SESSION['success'] = "You are now logged in";
   //	header('location: index.php');
+  echo "success you can now login";
   }
 }
 if (isset($_POST['login_user'])) {
