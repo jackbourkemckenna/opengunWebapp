@@ -27,7 +27,6 @@ if (isset($_POST['reg_user'])) {
   if ($password_1 != $password_2) {
 	array_push($errors, "The two passwords do not match");
   }
-  $reg_date = date_default_timezone_get();
 
   // first check the database to make sure
   // a user does not already exist with the same username and/or email
@@ -43,7 +42,7 @@ if (isset($_POST['reg_user'])) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
   	$query = "INSERT INTO users (firstname,lastname, email, password, phone_num)
-  			  VALUES('$firstname', '$lastname', '$email','$password','$phone_num','$reg_date')";
+  			  VALUES('$firstname', '$lastname', '$email','$password','$phone_num')";
   	mysqli_query($db, $query);
   //	$_SESSION['username'] = $firstname;
   //	$_SESSION['success'] = "You are now logged in";
