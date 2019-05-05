@@ -25,12 +25,11 @@ require("header.php");
                 <div class="row">
                   <!-- Instructions -->
                   <div class="col-xs-12">
-                    <p class="lead">Register now for <span class="text-success">FREE</span></p>
+                    <p class="lead">Register here <span class="text-success"></span></p>
                     <ul class="list-unstyled" style="line-height: 3; font-size: 1.4em; font-weight: 500;">
-                      <li><span class="fa fa-check text-success"></span> Participate in this contest</li>
-                      <li><span class="fa fa-check text-success"></span> Leaderboard feature to see who is on top</li>
-                      <li><span class="fa fa-check text-success"></span> Solve the problems faster than others to win</li>
-                      <li><span class="fa fa-check text-success"></span> Choose to code in your favorite language</li>
+                      <li><span class="fa fa-check text-success"></span>recive free text alerts</li>
+                      <li><span class="fa fa-check text-success"></span>Feel more secure</li>
+              
                     </ul>
                   </div>
                 </div>
