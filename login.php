@@ -2,7 +2,6 @@
 require ("errors.php");
 require('server.php');
 require("header.php");
-echo ($_SESSION['email']);
 ?>
 
 <div id="contentContainer" class="container">
