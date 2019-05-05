@@ -48,7 +48,11 @@ if (isset($_POST['reg_user'])) {
   //	$_SESSION['success'] = "You are now logged in";
   //	header('location: index.php');
   echo "success you can now login";
-  }
+}else{
+  echo "try again";
+}
+}else {
+  echo "try again";
 }
 if (isset($_POST['login_user'])) {
   $email = mysqli_real_escape_string($db, $_POST['email']);
