@@ -29,7 +29,7 @@ require("header.php");
                     <ul class="list-unstyled" style="line-height: 3; font-size: 1.4em; font-weight: 500;">
                       <li><span class="fa fa-check text-success"></span>recive free text alerts</li>
                       <li><span class="fa fa-check text-success"></span>Feel more secure</li>
-              
+
                     </ul>
                   </div>
                 </div>
@@ -41,27 +41,27 @@ require("header.php");
                     <form id="signupForm" method="post" accept-charset="UTF-8" validate method="post" action="index.php">
 											<div class="input-group">
 													<span class="input-group-addon"><i class="icon-envelope icon-2x"></i></span>
-													<input id="email" class="form-control input-lg" placeholder="Firstname" maxlength="100" type="text" name="firstname" validate>
+													<input id="email" class="form-control input-lg" placeholder="Firstname" maxlength="15" type="text" name="firstname" required>
 												</div>
                     <div class="input-group">
                         <span class="input-group-addon"><i class="icon-envelope icon-2x"></i></span>
-                        <input id="email" class="form-control input-lg" placeholder="Lastname" maxlength="100" type="text" name="lastname" validate>
+                        <input id="email" class="form-control input-lg" placeholder="Lastname" maxlength="15" type="text" name="lastname" required>
                       </div>
 											<div class="input-group">
 	                        <span class="input-group-addon"><i class="icon-envelope icon-2x"></i></span>
-	                        <input id="email" class="form-control input-lg" placeholder="Email" maxlength="100" type="email" name="email" validate>
+	                        <input id="email" class="form-control input-lg" placeholder="Email" maxlength="50" type="email" name="email" required>
 	                      </div>
                       <div class="input-group">
                         <span class="input-group-addon"><i class="icon-asterisk icon-2x"></i></span>
-                        <input id="password" class="form-control input-lg" placeholder="Password" maxlength="60" type="password" name="password_1">
+                        <input id="password" class="form-control input-lg" placeholder="Password" maxlength="60" type="password" name="password_1"required>
                       </div>
 											<div class="input-group">
 												<span class="input-group-addon"><i class="icon-asterisk icon-2x"></i></span>
-												<input id="password" class="form-control input-lg" placeholder="Password" maxlength="60" type="password" name="password_2">
+												<input id="password" class="form-control input-lg" placeholder="Password" maxlength="60" type="password" name="password_2"required>
 											</div>
                       <div class="input-group">
                         <span class="input-group-addon"><i class="icon-asterisk icon-2x"></i></span>
-                        <input id="phone" class="form-control input-lg" placeholder="Mobile number" maxlength="60" type="number" name="phone_num">
+                        <input id="phone" class="form-control input-lg" placeholder="Mobile number" maxlength="60" type="number" name="phone_num"required>
                       </div>
                       <div class="form-group">
                         <div class="g-recaptcha" data-sitekey="6LdJRxETAAAAABZT0MUNO1r5at_-JuSGeAPTqIM6"></div>

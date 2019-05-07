@@ -7,11 +7,7 @@
     echo "hello";
   	header('location: login.php');
   }
-  if (isset($_GET['logout'])) {
-  	session_destroy();
-  	unset($_SESSION['email']);
-  	header("location: dashboard.php");
-  }
+
 
 include 'errors.php';
 require '../aws-autoloader.php';

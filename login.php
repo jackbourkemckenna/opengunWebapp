@@ -38,7 +38,7 @@ require("header.php");
               <div class="col-sm-6 col-xs-12">
                 <div class="row">
                   <div class="col-xs-12">
-                    <form id="signupForm" method="post" accept-charset="UTF-8" validate method="post" action="dashboard.php">
+                    <form id="signupForm" method="post" accept-charset="UTF-8" validate method="post" action="login.php">
 											<div class="input-group">
 													<span class="input-group-addon"><i class="icon-envelope icon-2x"></i></span>
 													<input id="email" class="form-control input-lg" placeholder="Email" maxlength="100" type="email" name="email" validate>
