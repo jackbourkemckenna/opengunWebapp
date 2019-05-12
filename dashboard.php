@@ -10,9 +10,11 @@
 
 
 include 'errors.php';
-require 'aws-autoloader.php';
+require 'vendor/autoload.php';
+
 use Aws\S3\S3Client;
-use Aws\Exception\AwsException;
+use Aws\S3\Exception\S3Exception;
+
 
 //Create a S3Client
 $s3Client = new S3Client([
