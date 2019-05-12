@@ -10,7 +10,7 @@
 
 
 include 'errors.php';
-require '../aws-autoloader.php';
+require 'aws-autoloader.php';
 use Aws\S3\S3Client;
 use Aws\Exception\AwsException;
 
@@ -120,7 +120,9 @@ $videSlice = array_slice($videOut, 1);
 
 <h1>Your recordings</h1>
 <p>Welcome <strong><?php echo $_SESSION['email']; ?></strong></p>
-
+<h1>webview</h1>
+<iframe src="https://www.w3schools.com"></iframe>
+<iframe src="http://52.49.200.121:5000/" width="200" height="300" scrolling="auto" frameborder=0></iframe>
 
 <body>
 	<?php foreach($videSlice as $key => $value) : ?>
@@ -136,6 +138,12 @@ $videSlice = array_slice($videOut, 1);
 
 		<img src="https://s3-eu-west-1.amazonaws.com/open-gun-recordings/<?php echo $value; ?>" height="240" width="240">
 	</img>
+
+
+
 	<?php endforeach; ?>
+
+
 </body>
+
 </html>
